@@ -15,7 +15,7 @@ REPO_OWNER=GoogleCloudPlatform
 
 
 create_github_trigger() {
-    DIR_IN_REPO=$(pwd | sed "s%${REPO_NAME}/% %g" | awk '{print $2}')
+    DIR_IN_REPO=$(pwd | sed "s%${https://github.com/applehph/training-data-analyst}/% %g" | awk '{print $2}')
     gcloud beta builds triggers create github \
       --build-config="${DIR_IN_REPO}/cloudbuild.yaml" \
       --included-files="${DIR_IN_REPO}/**" \
